@@ -22,8 +22,8 @@ python -m pip install virtualenv
 
 ## Installation  
 
-Run the command below and everything should be fine. 
-**Start a new terminal before running the command**
+Run the command below and everything should be fine.  
+**Start a new terminal before running the command.**
 ```
 $ git clone https://github.com/bihellzin/quake-parser.git && cd quake-parser && python3 -m virtualenv .venv && source .venv/bin/activate && python3 -m pip install -r requirements-dev.txt
 ```  
