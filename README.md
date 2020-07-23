@@ -15,7 +15,7 @@ If you get something like the message below, you can continue the guide. Otherwi
 Python 3.6.9
 ```
 
-You must have pip installed, if you doesn't install [here](https://pip.pypa.io/en/stable/installing/). Finally, install virtualenv with the command below.  
+You must have pip installed. If you doesn't, install [here](https://pip.pypa.io/en/stable/installing/). Finally, install virtualenv with the command below.  
 ```
 python -m pip install virtualenv
 ```
