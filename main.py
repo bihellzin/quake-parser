@@ -26,7 +26,6 @@ def get_db():
 
 @app.get("/")
 def home(request: Request):
-  test = Game()
   return templates.TemplateResponse('index.html', {"request":request})
 
 

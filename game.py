@@ -9,11 +9,17 @@ class Game:
   
 
   def add_player(self, user_name: str, user_id: int):
+    """
+    Add a new player to the game
+    """
     self._players.append(user_name)
     self._kills[user_id] = {"name": user_name, "score": 0}
   
 
   def __str__(self) -> str:
+    """
+    To make the print(Game_instance) look better
+    """
     output = f"{{\n    total_kills: {self._total_kills};\
     \n    players: {self._players};\
     \n    kills: {{\n"
@@ -27,12 +33,19 @@ class Game:
 
 
   def __repr__(self) -> dict:
+    """
+    To make the repr(Game_instance) look better
+    """
     return str({"total kills": self._total_kills, "players": self._players, "kills": self._kills})
   
 
   def generate_hash(self) -> str:
-    return hashlib.sha256(self.__repr__().encode('utf-8')).hexdigest()
+    "Generate the hash of the game based on the __repr__ returned"
+    return hashlib.sha256(self.__repr__().encode("utf-8")).hexdigest()
   
 
   def data_to_store(self):
+    """
+    What is going to be stored in the database, this is the Games.game_info
+    """
     return {"total kills": self._total_kills, "players": self._players, "kills": self._kills}

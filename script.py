@@ -1,5 +1,5 @@
-from parser import Parser
 import models
+from parser import Parser
 from database import SessionLocal, engine
 from sqlalchemy.orm import Session 
 from pydantic import BaseModel
@@ -7,6 +7,9 @@ from models import Games
 
 
 def get_db():
+  """
+  Starts a connection to the database
+  """
   try:
     db = SessionLocal()
     return db
@@ -16,6 +19,10 @@ def get_db():
 
 
 if __name__ == '__main__':
+  """
+  Store the games in the database and print a report of the games in the games.log 
+  file
+  """
   db = get_db()
 
   file_parser = Parser()
