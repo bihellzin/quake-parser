@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Info</title>
+  <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+  <h2 class="title">Dados da partida</h2>
+  <h3 class="title">Total de mortes: {{game_info.game_info['total kills']}}</h3>
+  <div class="cards-only">
+    <div class="container">
+      {% for i in game_info.game_info['kills'] %}
+        <div class="card">
+          <div class="player-name">
+            <h2>{{game_info.game_info['kills'][i]['name']}}</h2>
+          </div>
+          <div class="score">
+            <h3>Score</h3>
+            <p>{{game_info.game_info['kills'][i]['score']}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>
