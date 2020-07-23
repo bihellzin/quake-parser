@@ -26,11 +26,17 @@ def get_db():
 
 @app.get("/")
 def home(request: Request):
+  """
+  return the index.html template
+  """
   return templates.TemplateResponse('index.html', {"request":request})
 
 
 @app.get("/{game_id}")
 async def show_game_info(request: Request, game_id: int):
+  """
+  Access the database and return the result of the game passed through the URL
+  """
   db = get_db()
   game_info = db.query(Games).filter(Games.id == game_id).first()
   return templates.TemplateResponse('game.html', {"request": request, "game_info": game_info})
