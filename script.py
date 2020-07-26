@@ -1,10 +1,8 @@
 import models
 from parser import Parser
-from database import SessionLocal, engine
-from sqlalchemy.orm import Session 
-from pydantic import BaseModel
 from models import Games
 from access_db import *
+from database import engine
 
 
 if __name__ == '__main__':
@@ -12,6 +10,8 @@ if __name__ == '__main__':
   Store the games in the database and print a report of the games in the games.log 
   file
   """
+  models.Base.metadata.create_all(bind=engine) # Creates the database if not created yet
+
   db = get_db()
 
   file_parser = Parser()
