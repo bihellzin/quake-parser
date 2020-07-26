@@ -30,11 +30,11 @@ $ git clone https://github.com/bihellzin/quake-parser.git && cd quake-parser && 
 
 ## Running  
 
-Run the command below and go to the link where uvicorn starts the app (usually http://127.0.0.1:8000).  
+Run the command below and go to the link where uvicorn starts the app (usually http://localhost:8000/).  
 ```
 $ uvicorn main:app --reload
 ```  
-You must pass the parameters through the URL.  
+You must pass the parameter through the URL (http://localhost:8000/{parameter}).  
 To run the script.py just run the command below and you can get the report of all games (that are in the games.log) in the command line.  
 ```
 $ python3 script.py
