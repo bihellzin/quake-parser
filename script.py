@@ -4,18 +4,7 @@ from database import SessionLocal, engine
 from sqlalchemy.orm import Session 
 from pydantic import BaseModel
 from models import Games
-
-
-def get_db():
-  """
-  Starts a connection to the database
-  """
-  try:
-    db = SessionLocal()
-    return db
-  
-  finally:
-    db.close()
+from access_db import *
 
 
 if __name__ == '__main__':
