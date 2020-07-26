@@ -34,7 +34,7 @@ Run the command below and go to the link where uvicorn starts the app (usually h
 ```
 $ uvicorn main:app --reload
 ```  
-You must pass the parameter through the URL (http://localhost:8000/{parameter}).  
+You must pass the parameter through the URL (http://localhost:8000/2).  
 To run the script.py just run the command below and you can get the report of all games (that are in the games.log) in the command line.  
 ```
 $ python3 script.py
