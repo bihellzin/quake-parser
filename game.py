@@ -48,4 +48,16 @@ class Game:
     """
     What is going to be stored in the database, this is the Games.game_info
     """
+    self.format_kills()
     return {"total kills": self._total_kills, "players": self._players, "kills": self._kills}
+  
+
+  def format_kills(self):
+    """
+    Format the self._kills to use the username as key, instead of user id
+    """
+    new_kills_format = {}
+    for user_id in self._kills:
+      new_kills_format[self._kills[user_id]["name"]] = self._kills[user_id]["score"]
+
+    self._kills = new_kills_format

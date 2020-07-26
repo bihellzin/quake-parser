@@ -33,7 +33,7 @@ def home(request: Request):
 
 
 @app.get("/{game_id}")
-async def show_game_info(request: Request, game_id: int):
+def show_game_info(request: Request, game_id: int):
   """
   Access the database and return the result of the game passed through the URL
   """

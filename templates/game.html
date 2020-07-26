@@ -10,14 +10,14 @@
   <h3 class="title">Total de mortes: {{game_info.game_info['total kills']}}</h3>
   <div class="cards-only">
     <div class="container">
-      {% for i in game_info.game_info['kills'] %}
+      {% for player in game_info.game_info['kills'] %}
         <div class="card">
           <div class="player-name">
-            <h2>{{game_info.game_info['kills'][i]['name']}}</h2>
+            <h2>{{ player }}</h2>
           </div>
           <div class="score">
             <h3>Score</h3>
-            <p>{{game_info.game_info['kills'][i]['score']}}</p>
+            <p>{{game_info.game_info['kills'][player]}}</p>
           </div>
         </div>
       {% endfor %}
